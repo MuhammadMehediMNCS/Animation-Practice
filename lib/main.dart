@@ -18,11 +18,14 @@ import 'package:animation_work/animation_&_motion_widgets/transition_rotation.da
 import 'package:animation_work/animation_&_motion_widgets/transition_scale.dart';
 import 'package:animation_work/animation_&_motion_widgets/transition_size.dart';
 import 'package:animation_work/animation_&_motion_widgets/transition_slide.dart';
+import 'package:animation_work/animation_idea/animations_animated.dart';
+import 'package:animation_work/flip_animation/flip_animation.dart';
+import 'package:animation_work/hidden_drawer/hidden_main.dart';
 import 'package:animation_work/slide_text_animation.dart';
 import 'package:animation_work/sun_animation/sun_animation_main.dart';
 import 'package:flutter/material.dart';
 
 
 void main() {
-  runApp(const LoadingButton());
+  runApp(const HiddenDrawer());
 }
