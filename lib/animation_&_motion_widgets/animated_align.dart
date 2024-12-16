@@ -73,7 +73,7 @@ class _AnimationTwoState extends State<AnimationTwo> {
             onTap: () => setState(() {change = !change;}),
             highlightColor: Colors.transparent,
             splashColor: Colors.transparent,
-            child: Container(
+            child: SizedBox(
               height: MediaQuery.of(context).size.height,
               width: MediaQuery.of(context).size.width,
               child: AnimatedAlign(

@@ -18,21 +18,21 @@ class LoaingShimmer extends StatelessWidget {
         primaryColor: Colors.blue.shade200,
         primarySwatch: Colors.deepOrange
       ),
-      home: const loadingEffect(title: title),
+      home: const LoadingEffect(title: title),
     );
   }
 }
 
-class loadingEffect extends StatefulWidget {
+class LoadingEffect extends StatefulWidget {
   final String title;
 
-  const loadingEffect({Key? key, required this.title}) : super(key: key);
+  const LoadingEffect({Key? key, required this.title}) : super(key: key);
 
   @override
-  State<loadingEffect> createState() => _loadingEffectState();
+  State<LoadingEffect> createState() => _LoadingEffectState();
 }
 
-class _loadingEffectState extends State<loadingEffect> {
+class _LoadingEffectState extends State<LoadingEffect> {
   List<Food> foods = [];
 
   bool isLoading = false;

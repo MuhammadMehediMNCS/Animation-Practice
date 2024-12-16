@@ -20,6 +20,7 @@ import 'package:animation_work/animation_&_motion_widgets/transition_scale.dart'
 import 'package:animation_work/animation_&_motion_widgets/transition_size.dart';
 import 'package:animation_work/animation_&_motion_widgets/transition_slide.dart';
 import 'package:animation_work/animation_idea/animations_animated.dart';
+import 'package:animation_work/bkash_button/balance_transfer.dart';
 import 'package:animation_work/flip_animation/flip_animation.dart';
 import 'package:animation_work/hidden_drawer/hidden_main.dart';
 import 'package:animation_work/page_route_transition/animation_page_route.dart';
@@ -29,5 +30,5 @@ import 'package:flutter/material.dart';
 
 
 void main() {
-  runApp(const LoaingShimmer());
+  runApp(const BalanceTransfer());
 }

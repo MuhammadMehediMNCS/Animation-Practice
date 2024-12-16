@@ -4,6 +4,8 @@ import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 class SpinKitDemo extends StatelessWidget {
   final _loading = ValueNotifier(false);
+
+  SpinKitDemo({super.key});
   
   @override
   Widget build(BuildContext context) {
@@ -18,7 +20,7 @@ class SpinKitDemo extends StatelessWidget {
             valueListenable: _loading,
             builder: (BuildContext context, bool value, child) {
               if (value) {
-                return SpinKitFadingCircle(
+                return const SpinKitFadingCircle(
                   color: Colors.red,
                   size: 50.0,
                 );
@@ -32,7 +34,7 @@ class SpinKitDemo extends StatelessWidget {
                       _loading.value = false;
                     }
                   },
-                  child: Text('Login'));
+                  child: const Text('Login'));
               }
             },
           ),

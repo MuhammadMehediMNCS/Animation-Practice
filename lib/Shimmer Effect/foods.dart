@@ -1,17 +1,17 @@
 import 'food.dart';
 
 List<Food> allFoods = [
-  Food(
+  const Food(
     urlImage: 'urlImage',
     title: 'Apple',
     description: 'An apple a day keeps the doctor away.'
   ),
-  Food(
+  const Food(
     urlImage: 'urlImage',
     title: 'Apple',
     description: 'An apple a day keeps the doctor away.'
   ),
-  Food(
+  const Food(
     urlImage: 'urlImage',
     title: 'Apple',
     description: 'An apple a day keeps the doctor away.'

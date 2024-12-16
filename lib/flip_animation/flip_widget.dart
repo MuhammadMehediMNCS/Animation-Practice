@@ -29,10 +29,10 @@ class _FlipWidgetState extends State<FlipWidget> with SingleTickerProviderStateM
     super.initState();
 
     _controller = AnimationController(
-      vsync: this, duration: Duration(seconds: 1)
+      vsync: this, duration: const Duration(seconds: 1)
     );
 
-    final flipCurve = Cubic(0.455, 0.030, 0.515, 0.955);
+    const flipCurve = Cubic(0.455, 0.030, 0.515, 0.955);
     animationCurve = CurvedAnimation(parent: _controller, curve: flipCurve);
   }
 
@@ -86,7 +86,7 @@ class _FlipWidgetState extends State<FlipWidget> with SingleTickerProviderStateM
   );
 
   Widget slideUpTransition({Widget? child}) {
-    final Tween<Offset> slideUp = Tween<Offset>(begin: Offset.zero, end: Offset(0.0, -1.0));
+    final Tween<Offset> slideUp = Tween<Offset>(begin: Offset.zero, end: const Offset(0.0, -1.0));
     
     return SlideTransition(
       position: slideUp.animate(animationCurve),

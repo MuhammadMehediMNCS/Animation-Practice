@@ -164,7 +164,7 @@ class _MultiZoomTextState extends State<MultiZoomText> {
   void initState() {
     super.initState();
 
-    textStyle = TextStyle();
+    textStyle = const TextStyle();
     fontStyle = FontStyle.normal;
     fontWeight = FontWeight.normal;
     textDecoration = TextDecoration.none;

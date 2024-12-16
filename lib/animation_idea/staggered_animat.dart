@@ -7,7 +7,7 @@ class StaggAni extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: Center(
@@ -17,6 +17,8 @@ class StaggAni extends StatelessWidget {
 }
 
 class StaggeredAnimationDemo extends StatelessWidget {
+  const StaggeredAnimationDemo({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

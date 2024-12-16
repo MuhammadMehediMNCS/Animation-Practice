@@ -16,14 +16,14 @@ class Knowledge extends StatelessWidget {
 
 // For Simple Animation One.
 
-class Simple_Animations_Tween extends StatefulWidget {
-  const Simple_Animations_Tween({Key? key}) : super(key: key);
+class SimpleAnimationsTween extends StatefulWidget {
+  const SimpleAnimationsTween({Key? key}) : super(key: key);
 
   @override
-  State<Simple_Animations_Tween> createState() => _Simple_Animations_TweenState();
+  State<SimpleAnimationsTween> createState() => _SimpleAnimationsTweenState();
 }
 
-class _Simple_Animations_TweenState extends State<Simple_Animations_Tween> with SingleTickerProviderStateMixin {
+class _SimpleAnimationsTweenState extends State<SimpleAnimationsTween> with SingleTickerProviderStateMixin {
   late AnimationController _controller;
   late Animation<double> _sizeAnimation;
 
@@ -51,14 +51,14 @@ class _Simple_Animations_TweenState extends State<Simple_Animations_Tween> with 
 
 // For Simple Animation Two. Color problem (ColorTween()).
 
-class Complex_Staggered_Animation extends StatefulWidget {
-  const Complex_Staggered_Animation({Key? key}) : super(key: key);
+class ComplexStaggeredAnimation extends StatefulWidget {
+  const ComplexStaggeredAnimation({Key? key}) : super(key: key);
 
   @override
-  State<Complex_Staggered_Animation> createState() => _Complex_Staggered_AnimationState();
+  State<ComplexStaggeredAnimation> createState() => _ComplexStaggeredAnimationState();
 }
 
-class _Complex_Staggered_AnimationState extends State<Complex_Staggered_Animation> with SingleTickerProviderStateMixin {
+class _ComplexStaggeredAnimationState extends State<ComplexStaggeredAnimation> with SingleTickerProviderStateMixin {
   late AnimationController _controller;
   late Animation<double> sizeAnimation;
   late Animation<Color> colorAnimation;
@@ -69,11 +69,11 @@ class _Complex_Staggered_AnimationState extends State<Complex_Staggered_Animatio
   void initState() {
     super.initState();
 
-    _controller = AnimationController(vsync: this, duration: Duration(seconds: 5));
-    sizeAnimation = Tween(begin: 50.0, end: 200.0).animate(CurvedAnimation(parent: _controller, curve: Interval(0.0, 0.5, curve: Curves.decelerate)));
-    colorAnimation = Tween<Color>(begin: Colors.green, end: Colors.amber).animate(CurvedAnimation(parent: _controller, curve: Interval(0.5, 1.0)));
-    helloAnimation = Tween<double>(begin: 20.0, end: 0.0).animate(CurvedAnimation(parent: _controller, curve: Interval(0.5, 0.7, curve: Curves.easeIn)));
-    messageAnimation = Tween<Offset>(begin: Offset(16.0, 0.0), end: Offset.zero).animate(CurvedAnimation(parent: _controller, curve: Interval(0.7, 1.0, curve: Curves.ease)));
+    _controller = AnimationController(vsync: this, duration: const Duration(seconds: 5));
+    sizeAnimation = Tween(begin: 50.0, end: 200.0).animate(CurvedAnimation(parent: _controller, curve: const Interval(0.0, 0.5, curve: Curves.decelerate)));
+    colorAnimation = Tween<Color>(begin: Colors.green, end: Colors.amber).animate(CurvedAnimation(parent: _controller, curve: const Interval(0.5, 1.0)));
+    helloAnimation = Tween<double>(begin: 20.0, end: 0.0).animate(CurvedAnimation(parent: _controller, curve: const Interval(0.5, 0.7, curve: Curves.easeIn)));
+    messageAnimation = Tween<Offset>(begin: const Offset(16.0, 0.0), end: Offset.zero).animate(CurvedAnimation(parent: _controller, curve: const Interval(0.7, 1.0, curve: Curves.ease)));
     _controller.forward();
     _controller.addListener(() {
       setState(() {});
@@ -127,14 +127,14 @@ class _Complex_Staggered_AnimationState extends State<Complex_Staggered_Animatio
 
 // For Simple Animation Three.
 
-class Routing_Animation extends StatefulWidget {
-  const Routing_Animation({Key? key}) : super(key: key);
+class RoutingAnimation extends StatefulWidget {
+  const RoutingAnimation({Key? key}) : super(key: key);
 
   @override
-  State<Routing_Animation> createState() => _Routing_AnimationState();
+  State<RoutingAnimation> createState() => _RoutingAnimationState();
 }
 
-class _Routing_AnimationState extends State<Routing_Animation> {
+class _RoutingAnimationState extends State<RoutingAnimation> {
 
   /* Run the Commands in terminal for <PageFlipBuilderState>.
       flutter pub add page_flip_builder

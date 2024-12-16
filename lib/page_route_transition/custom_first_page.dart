@@ -5,8 +5,8 @@ import 'custom_page_route.dart';
 import 'page_two.dart';
 
 
-class First_Page extends StatelessWidget {
-  const First_Page({Key? key}) : super(key: key);
+class FirstPage extends StatelessWidget {
+  const FirstPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +31,7 @@ class First_Page extends StatelessWidget {
       case '/first':
       default:
         return MaterialPageRoute(
-          builder: (context) => const First_Page(),
+          builder: (context) => const FirstPage(),
           settings: settings
         );
     }

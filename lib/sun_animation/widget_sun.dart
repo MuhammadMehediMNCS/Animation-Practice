@@ -23,7 +23,7 @@ class _SunWidgetState extends State<SunWidget> with SingleTickerProviderStateMix
 
     rotateAnimation = Tween<double>(begin: 0.0, end:  2 * pi).animate(_controller);
 
-    _controller.repeat(period: Duration(seconds: 4));
+    _controller.repeat(period: const Duration(seconds: 4));
   }
 
   @override

@@ -21,7 +21,7 @@ class CalendarDoorWidget extends StatefulWidget {
 }
 
 class _CalendarDoorWidgetState extends State<CalendarDoorWidget> with TickerProviderStateMixin{
-  static final flipCurve = Cubic(0.455, 0.030, 0.515, 0.955);
+  static const flipCurve = Cubic(0.455, 0.030, 0.515, 0.955);
 
   late AnimationController _controller;
   late Animation<double> animation;
@@ -34,7 +34,7 @@ class _CalendarDoorWidgetState extends State<CalendarDoorWidget> with TickerProv
 
     _controller = AnimationController(
       vsync: this,
-      duration: Duration(milliseconds: 700)
+      duration: const Duration(milliseconds: 700)
     );
 
     animation = Tween<double>(begin: 0.0, end: 1.0).animate(
@@ -56,7 +56,7 @@ class _CalendarDoorWidgetState extends State<CalendarDoorWidget> with TickerProv
 
   @override
   Widget build(BuildContext context) {
-    final openDoorUntil = 3 / 5;
+    const openDoorUntil = 3 / 5;
 
     return GestureDetector(
       onTap: onTap,

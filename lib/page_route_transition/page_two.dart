@@ -5,7 +5,7 @@ class SecondPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: PageNoTwo(),
     );
@@ -24,19 +24,19 @@ class _PageNoTwoState extends State<PageNoTwo> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('This is Second Page'),
+        title: const Text('This is Second Page'),
         centerTitle: true,
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(Icons.flutter_dash, size: 70),
-            SizedBox(height: 30),
+            const Icon(Icons.flutter_dash, size: 70),
+            const SizedBox(height: 30),
             Container(
-              padding: EdgeInsets.all(32),
+              padding: const EdgeInsets.all(32),
               child: ElevatedButton(
-                child: Text('Back'),
+                child: const Text('Back'),
                 onPressed: () => Navigator.of(context).pop()
               ),
             )

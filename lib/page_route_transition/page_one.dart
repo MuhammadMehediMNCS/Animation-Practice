@@ -5,7 +5,7 @@ class FirstPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: PageNoOne(),
     );
@@ -24,10 +24,10 @@ class _PageNoOneState extends State<PageNoOne> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('This is First Page'),
+        title: const Text('This is First Page'),
         centerTitle: true,
       ),
-      body: Center(
+      body: const Center(
         child: Column(
           children: [],
         ),

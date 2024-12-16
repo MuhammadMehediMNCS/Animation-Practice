@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class MyApp extends StatelessWidget {
-  static final String title = 'Sidekick Example';
+  static const String title = 'Sidekick Example';
+
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) => MaterialApp(

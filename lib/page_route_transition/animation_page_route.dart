@@ -90,13 +90,13 @@ class _FadeTransitionState extends State<FadeTransition> {
     return Scaffold(
       body: Container(
         alignment: Alignment.center,
-        padding: EdgeInsets.all(32),
+        padding: const EdgeInsets.all(32),
         child: ElevatedButton(
-          child: Text('Right Left Top Bottom'),
+          child: const Text('Right Left Top Bottom'),
           onPressed: () => Navigator.of(context).push(
             PageTransition(
               type: PageTransitionType.fade, // fade, rightToLeftWithFade
-              child: SecondPage()
+              child: const SecondPage()
             )
           )
         ),
@@ -121,14 +121,14 @@ class _ScaleTransitionState extends State<ScaleTransition> {
     return Scaffold(
       body: Container(
         alignment: Alignment.center,
-        padding: EdgeInsets.all(32),
+        padding: const EdgeInsets.all(32),
         child: ElevatedButton(
-          child: Text('Right Left Top Bottom'),
+          child: const Text('Right Left Top Bottom'),
           onPressed: () => Navigator.of(context).push(
             PageTransition(
               type: PageTransitionType.scale,     // rotate, size
               alignment: Alignment.bottomCenter,
-              child: SecondPage()
+              child: const SecondPage()
             )
           )
         ),

@@ -22,7 +22,7 @@ class ShimmerWidget extends StatelessWidget {
   Widget build(BuildContext context) => Shimmer.fromColors(
     baseColor: Colors.grey[400]!,
     highlightColor: Colors.grey[300]!,
-    period: Duration(seconds: 3),
+    period: const Duration(seconds: 3),
     child: Container(
       width: width,
       height: height,
