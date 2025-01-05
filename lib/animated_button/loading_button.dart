@@ -7,7 +7,7 @@ class LoadingButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: LoadingOutlinedButton(),
+      home: LoadingAnimation(),
     );
   }
 }
@@ -20,41 +20,42 @@ class LoadingAnimation extends StatefulWidget {
 }
 
 class _LoadingAnimationState extends State<LoadingAnimation> {
-  bool isLoading = true;
+  bool isLoading = false;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.deepOrange,
         title: const Text('Progress Button Animation'),
+        titleTextStyle: const TextStyle(color: Colors.white),
       ),
       body: Container(
         alignment: Alignment.center,
         padding: const EdgeInsets.all(32.0),
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.deepOrange,
             textStyle: const TextStyle(fontSize: 24.0),
             minimumSize: const Size.fromHeight(72.0),
             shape: const StadiumBorder()
           ),
+          onPressed: isLoading ? null : () async {
+            setState(() => isLoading = true);
+            // After Loading go to Server.
+            await Future.delayed(const Duration(seconds: 5));
+            setState(() => isLoading = false); 
+          },
           child: isLoading
           ? const Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              CircularProgressIndicator(color: Colors.white,),
+              CircularProgressIndicator(color: Colors.deepOrange,),
               SizedBox(width: 24.0),
-              Text('Please Wait...')
+              Text('Please Wait...', style: TextStyle(color: Colors.deepOrange))
             ],
           )
-          : const Text('Login'),
-          onPressed: () async {
-            if(isLoading) return;
-
-            setState(() => isLoading = true);
-            // After Loading go to Server.
-            await Future.delayed(const Duration(seconds: 5));
-            setState(() => false); 
-          }
+          : const Text('Login', style: TextStyle(color: Colors.white))
         ),
       ),
     );

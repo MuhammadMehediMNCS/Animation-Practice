@@ -30,5 +30,5 @@ import 'package:flutter/material.dart';
 
 
 void main() {
-  runApp(const BalanceTransfer());
+  runApp(const LoadingButton());
 }
